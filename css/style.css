@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  background-image: url("../Media/Img/background.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  position: relative;
+}
+
+/*--Monitor--*/
+
+#monitor {
+  background-color: #000;
+  margin: auto;
+  width: 750px;
+  padding: 75px 0;
+  display: block;
+  border: solid 4px #e2e2e2;
+  border-radius: 2%;
+  color: #da0000;
+  font-size: 40px;
+  text-align: center;
+}
+
+/*--Buttons--*/
+
+#codeButtons {
+  width: 252px;
+  margin-top: 150px;
+  background: #adadad;
+  border: solid 5px #8a8a8a;
+  border-radius: 5%;
+  margin: auto;
+}
+
+.codeButton {
+  margin: 5px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  border: solid 5px #BBB;
+  border-radius: 15px;
+  outline: none;
+  background-color: #EEE;
+  display: inline-block;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+#submitBtn {
+  width: 240px;
+}
+
+.codeButton:hover {
+  background-color: #BCBCBC;
+}
+
+.codeButton:active {
+  background-color: #c71919;
+  border-color: #991919;
+}
