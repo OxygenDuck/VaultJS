@@ -2,24 +2,55 @@ body {
   margin: 0;
   background-image: url("../Media/Img/background.png");
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-size: cover;
   position: relative;
 }
 
-/*--Monitor--*/
+#vaultTable {
+  margin: auto;
+}
+
+#vaultCell {
+  background-color: #9f9f9f;
+  border: 4px solid #7e7e7e;
+  border-radius: 2px;
+  width: 575px;
+  height: 575px;
+  position: relative;
+}
+
+/*--Screens--*/
+
+#screens {
+  margin: 0.5% auto;
+  width: 970px;
+}
 
 #monitor {
   background-color: #000;
-  margin: auto;
   width: 750px;
   padding: 75px 0;
-  display: block;
+  display: inline;
   border: solid 4px #e2e2e2;
   border-radius: 2%;
-  color: #da0000;
+  color: #3b00ff;
   font-size: 40px;
   text-align: center;
+  float: left;
+}
+
+#counters {
+  background-color: #000;
+  width: 200px;
+  padding: 75px 0;
+  display: inline;
+  border: solid 4px #e2e2e2;
+  border-radius: 2%;
+  color: #FFF;
+  font-size: 20px;
+  text-align: justify;
+  float: right;
 }
 
 /*--Buttons--*/
@@ -58,4 +89,49 @@ body {
 .codeButton:active {
   background-color: #c71919;
   border-color: #991919;
+}
+
+/* --VAULT-- */
+@keyframes openVault {
+  0%    {margin-left: 0%;
+        transform: rotate(180deg);}
+  100%  {margin-left: -80%;
+        transform: rotate(0deg);}
+}
+
+@keyframes closeVault {
+  0%    {margin-left: -80%;
+        transform: rotate(0deg);}
+  100%  {margin-left: 0%;
+        transform: rotate(180deg);}
+}
+
+#vault {
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+}
+
+.vaultClosed {
+  animation-name: closeVault;
+  animation-duration: 4s;
+  margin-left: 0%;
+}
+
+.vaultOpened {
+  animation-name: openVault;
+  animation-duration: 4s;
+  margin-left: -80%;
+}
+
+#behindTheVault {
+  width: 420px;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  z-index: 1;
+  background-color: #000;
 }

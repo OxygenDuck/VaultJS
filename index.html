@@ -6,22 +6,43 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div id="monitor" >INSERT CODE: _ _ _ _</div>
-    <div id="codeButtons">
-      <button class="codeButton" type="button" name="btn1" onclick="PressButtonPjan(this)" value="1">1</button>
-      <button class="codeButton" type="button" name="btn2" onclick="PressButtonPjan(this)" value="2">2</button>
-      <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="3">3</button>
-      <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="4">4</button>
-      <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="5">5</button>
-      <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="6">6</button>
-      <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="7">7</button>
-      <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="8">8</button>
-      <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="9">9</button>
-      <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="*">*</button>
-      <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="0">0</button>
-      <button class="codeButton" type="button" onclick="PressButtonPjan(this)" >C</button>
-      <button class="codeButton" id="submitBtn" disabled type="button" onclick="SubmitPjan()">Submit</button>
+    <div id="screens">
+      <div id="monitor" >INSERT CODE: _ _ _ _</div>
+      <div id="counters" >Correct Codes: 0 <br/> Incorrect Codes: 0</div>
+      <div style="clear: both;"></div>
     </div>
+
+    <table id='vaultTable'>
+      <tr>
+
+        <td id="vaultCell"><img id="vault" src="Media/Img/vault.png" alt="vault">
+            <div id="behindTheVault">
+              <iframe id="vaultContent" hidden width="420" height="420" src="https://www.youtube.com/embed/Rapf3g_XvCc?start=1" frameborder="0" 0></iframe>
+            </div>
+        </td>
+
+        <td><div id="codeButtons">
+          <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="1">1</button>
+          <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="2">2</button>
+          <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="3">3</button>
+          <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="4">4</button>
+          <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="5">5</button>
+          <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="6">6</button>
+          <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="7">7</button>
+          <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="8">8</button>
+          <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="9">9</button>
+          <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="*">*</button>
+          <button class="codeButton" type="button" onclick="PressButtonPjan(this)" value="0">0</button>
+          <button class="codeButton" type="button" onclick="ResetPjan()" >C</button>
+          <button class="codeButton" id="submitBtn" disabled type="button" onclick="SubmitPjan()">Submit</button>
+        </div>
+      </td>
+
+      </tr>
+    </table>
+
+    <audio id="vaultAudio" src="Media/Sound/ButtonBeep.wav"></audio>
+
   </body>
 </html>
 
